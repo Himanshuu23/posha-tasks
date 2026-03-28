@@ -76,7 +76,7 @@ Designed in KiCad 8. Shows:
 - 4.7kΩ I²C pull-up resistors on SDA and SCL
 - 100nF + 1000µF decoupling capacitors on power rail
 
-See `kicad/ServoQCJig_schematic.png`
+![KiCad Schematic](kicad/ServoQCJig_schematic.png)
 
 ### Sample Output
 ```
