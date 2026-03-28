@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "author": "Systems Engineering Intern",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 87, "left": 172.2, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo1", "top": 113.2, "left": 528, "attrs": {} },
+    {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": -54.46,
+      "left": 480.23,
+      "attrs": { "i2cAddress": "0x3c" }
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -30.1, "left": 9.4, "attrs": {} }
+  ],
+  "connections": [
+    [ "uno:9", "servo1:PWM", "green", [ "v0" ] ],
+    [ "uno:5V", "servo1:V+", "red", [ "v0" ] ],
+    [ "uno:GND.2", "servo1:GND", "black", [ "v0" ] ],
+    [ "uno:GND.2", "oled1:GND", "black", [ "v0" ] ],
+    [ "uno:5V", "oled1:VCC", "red", [ "v0" ] ],
+    [ "uno:A5", "oled1:SCK", "green", [ "v0" ] ],
+    [ "uno:A4", "oled1:SDA", "green", [ "v0" ] ],
+    [ "pot1:GND", "uno:GND.2", "black", [ "v0" ] ],
+    [ "pot1:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "pot1:SIG", "uno:A0", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
+```
+
+---
+
+## FILE 4: `libraries.txt`
+```
+# Wokwi Library List
+Servo@1.2.1
